@@ -40,3 +40,44 @@ print(y)
 print(z)
 
 # Multiple vars can be assigned one value 
+x = y = z = float(10)
+print(x)
+print(type(x))
+
+print(y)
+print(type(y))
+
+print(z)
+print(type(z))
+
+# Unpacking into variables
+fruits = ['orange', 'mango', 'melon']
+
+x, y, z = fruits
+print(x)
+print(type(x))
+
+print(y)
+print(type(y))
+
+print(z)
+print(type(z))
+
+# Global Variables
+
+x = 'Awesome' # This is a global variable
+
+def beNice():
+    x = 'fantastic' # This is a local variable
+    print('You are ' + x)
+
+beNice()
+print(x)
+
+def beRude():
+    global x 
+    x = 'awesome'
+    print('You are not ' + x)
+
+beRude()
+print(x)
