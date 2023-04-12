@@ -72,5 +72,10 @@ print(text.split(","))
 # count method
 print(text.count('l'))
 
-string_methods_url = "https://www.w3schools.com/python/python_ref_string.asp"
 
+# String format
+age = 19
+short_bio = "I am {0} {first_name} and I am {age} years old".format(last_name, first_name = first_name, age=age)
+print(short_bio)
+
+string_methods_url = "https://www.w3schools.com/python/python_ref_string.asp"
