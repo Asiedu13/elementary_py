@@ -36,3 +36,5 @@ if 'icne' not in first_name:
     print('correct spelling')
 
 # String slicing
+b = 'This is the test string'
+print(b[2:7])
