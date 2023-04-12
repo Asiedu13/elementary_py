@@ -38,3 +38,39 @@ if 'icne' not in first_name:
 # String slicing
 b = 'This is the test string'
 print(b[2:7])
+
+# slice from the start
+print(b[:6])
+
+# Slice to the end
+print(b[5:])
+
+# Negative indexing
+print(b[-5:-2])
+
+
+
+# Modifying string
+text = ' Gello, World! '
+# upper method
+print(text.upper())
+
+# lower method
+print(text.lower())
+
+# strip method
+print(text.strip())
+
+# replace method
+print(text.replace('G', 'H'))
+
+# Python string methods always return a new value
+
+# split() method
+print(text.split(","))
+
+# count method
+print(text.count('l'))
+
+string_methods_url = "https://www.w3schools.com/python/python_ref_string.asp"
+
