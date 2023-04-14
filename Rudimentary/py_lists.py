@@ -59,3 +59,52 @@ print(thislist)
 
 del thislist[0]
 print(thislist)
+
+thislist.clear()
+print()
+# Looping through a list
+thislist.extend(('Rangerover', 'Toyota', 'lamborghini', 'Mazda', 'Scion', 'Ferrari', 'Aston Martin'))
+
+for x in thislist:
+    print(x)
+print()
+for i in range(len(thislist)):
+    print(thislist[i])
+    
+print()
+
+[print(x) for x in thislist]
+
+# List comprehension
+
+# [expression for x in iterable if x = True]
+
+# Create a new list with only values that have an 'a' in them
+new_car_list = [x for x in thislist if 'a' in x]
+print(new_car_list)
+print('Thislist len {} but new_car_list has length {}'.format(len(thislist), len(new_car_list)))
+
+# Sorting using the sort() method
+fruits = ['orange', 'kiwi', 'mango', 'pineapple', 'banana']
+fruits.sort()
+print(fruits)
+
+nums = [100, 50, 65, 82, 23]
+nums.sort()
+print(nums)
+
+nums.sort(reverse=True)
+print(nums)
+
+# Customizing the sort function
+def reduce_by_ten(n):
+    return n - 65
+
+nums.sort(key = reduce_by_ten)
+print(nums)
+
+
+
+# Copying a list
+new_list = thislist.copy()
+print(new_list)
