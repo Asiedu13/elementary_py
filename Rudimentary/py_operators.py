@@ -1,6 +1,6 @@
 # Python has an extensive list of operators that are grouped into seven categories
 
-# Arithmetic Operations
+# Arithmetic Operationsz
 print('Arithmetic Operators')
 print(3 + 3)
 print(3 - 3)
