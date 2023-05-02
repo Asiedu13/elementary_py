@@ -41,20 +41,22 @@ def ordered_linear_search(array, search_value):
 print(ordered_linear_search(test_arr, 50))
         
 # Binary search
-def binary_search(array, search_value):
-    lower_boundary = 0
-    upper_boundary = len(array)
-    
-    while lower_boundary <= upper_boundary:
-        midpoint = lower_boundary + (upper_boundary - lower_boundary) // 2
-        midpoint_value = array[midpoint]
-        
-        if search_value == midpoint_value:
-            return midpoint_value
-        elif search_value > midpoint_value:
-            lower_boundary = midpoint + 1
-        elif search_value < midpoint_value:
-            upper_boundary = midpoint - 1
-    return f'{search_value} does not exist' 
+
 # binary search test
-print(binary_search(test_arr, 23))
+
+
+# selection sort
+def selection_sort(array):
+    for i in range(len(array)):
+        lowest_number_index = i
+        for j in range(i + 1, len(array)):
+            if array[j] < array[lowest_number_index]:
+                lowest_number_index = j
+        
+        if lowest_number_index != i:
+            array[i], array[lowest_number_index] = array[lowest_number_index], array[i]
+    return array 
+
+test_arr = [23, 54, 13, 56, 75 , 78, 34, 64]
+
+print(selection_sort(test_arr))
