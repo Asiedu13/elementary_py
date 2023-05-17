@@ -19,6 +19,8 @@ def binary_search(array, search_value):
 
 test_arr = [i for i in range(30)]
 
-print(binary_search(test_arr, 10))
-print(binary_search(test_arr, 20))
-print(binary_search(test_arr, 30))
+
+if __name__ == '__main__':
+    print(binary_search(test_arr, 10))
+    print(binary_search(test_arr, 20))
+    print(binary_search(test_arr, 30))
