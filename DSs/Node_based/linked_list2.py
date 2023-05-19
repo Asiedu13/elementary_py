@@ -37,16 +37,37 @@ class LinkedList:
         current_node = self.firstNode
         current_index = 0
         
-        while current_node:
+        while current_node.next is not None:
             if current_node.data == search_value:
                 return current_index
             
             current_node = current_node.next
             current_index += 1
             
-        return current_index
+        return "Value does not exist in linked list"
+    
+    def insert_at_index(self, index, value):
+        # create new node to be inserted
+        new_node = Node(value);
+        current_index = 0
+        current_node = self.firstNode
+        
+        # move to index before the index of interest
+        while current_index < index - 1:
+            current_node = current_node.next
+            current_index += 1
+            
+        # Link new node to the next node
+        new_node.next = current_node.next
+        
+        # link previous node to the new node
+        current_node.next = new_node
+        
+            
+            
+            
             
 ll = LinkedList(node_1)
 
 print(ll.read(3))
-print(ll.indexOf(8))
+print(ll.indexOf(9))
